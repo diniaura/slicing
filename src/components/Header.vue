@@ -1,41 +1,131 @@
 <template>
-    <div class="h-screen mx-7">
-      <!-- Navbar -->
-      <div class="flex flex-row sm:flex-row rounded-2xl py-5 px-10 justify-between bg-indigo-950 my-6 items-center">
-        <div class="flex items-center">
-          <img alt="logo" class="w-1/6 my-2" src="@/assets/img/logo.png" />
-          <h2 class="text-2xl font-semibold tracking-wide py-3 ml-2">Lenscape</h2>
-        </div>
-        <nav class="flex flex-row bg-white text-black rounded-full shadow-3xl py-2 h-12 space-x-6 px-6 items-center">
-          <p class="hover:font-medium hover:text-indigo-950 cursor-pointer">Home</p>
-          <p class="hover:font-medium hover:text-indigo-950 cursor-pointer">About</p>
-          <p class="hover:font-medium hover:text-indigo-950 cursor-pointer">Services</p>
-          <p class="hover:font-medium hover:text-indigo-950 cursor-pointer">Projects</p>
-          <p class="hover:font-medium hover:text-indigo-950 cursor-pointer">Testimonials</p>
-          <p class="hover:font-medium hover:text-indigo-950 cursor-pointer">Contact</p>
-        </nav>
-        <div class="relative flex items-center border-1 rounded-full border border-blue-500 bg-white h-11">
-          <p class="px-5 text-blue-500 font-medium tracking-wide cursor-pointer">Get Started</p>
-          <arrowup class="m-1 bg-blue-500 rounded-full absolute left-28" />
-        </div>
-      </div>
+<div class="mx-7 lg:h-auto">
+  <!-- Navbar -->
+  <div class="fixed w-full z-40 start-0 top-0 px-10 py-3 md:py- lg:py-5 flex flex-wrap items-center justify-between bg-indigo-950 drop-shadow-xl">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="@/assets/img/logo.png" class="h-8" alt="Lenscape Logo">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap">Lenscape</span>
+    </a>
+    <div class="relative flex lg:order-2 space-x-5 lg:space-x-0 rtl:space-x-reverse items-center">
+      <button type="button" class="text-blue-500 bg-white font-medium rounded-full text-sm px-5 py-2 text-center flex border border-blue-400 relative">Get Started
+      <arrowup class="bg-blue-400 rounded-full absolute right-[-11px] lg:inline-flex" /></button>
 
-      <!-- Header -->
-      <div class="flex flex-row rounded-2xl py-9 px-10 justify-between bg-gradient-to-b from-indigo-950 via-indigo-700 to-indigo-400">
-        <div class="flex flex-col py-24">
-          <!-- Teks: Kiri -->
-          <p class="font-semibold text-5xl tracking-normal justify-center py-2">{{ caption }}</p>
-          <p class="font-light text-4xl tracking-normal py-2">- Unveil Your Story with Lenscape!</p>
-          <!-- Gambar: Kanan -->
+      <!-- Mobile Menu Button -->
+      <button 
+       type="button" 
+       class="inline-flex items-center w-8 h-8 justify-center text-sm text-white rounded-full lg:hidden hover:text-indigo-400 hover:bg-white duration-500 hover:scale-75"
+       aria-controls="navbar-sticky" 
+       aria-expanded="false" 
+       @click="toggleMobileMenu"
+      >
+        <span class="sr-only">Toggle menu</span>
+        <div v-if="!isMobileMenuOpen">
+          <!-- List icon -->
+          <svg 
+           class="w-5 h-5" 
+           aria-hidden="true" 
+           xmlns="http://www.w3.org/2000/svg" 
+           fill="none" 
+           viewBox="0 0 17 14"
+          >
+          <path 
+           stroke="currentColor" 
+           stroke-linecap="round" 
+           stroke-linejoin="round" 
+           stroke-width="2" 
+           d="M1 1h15M1 7h15M1 13h15"
+          />
+          </svg>
         </div>
-        <img alt="header image" class="w-1/3 object-contain" :src="photo" />
-      </div>
+        <div v-else>
+          <!-- X icon -->
+          <svg
+            class="w-7 h-7 text-red-400" 
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+          </svg>
+        </div>
+      </button>
     </div>
-</template>
 
+    <!-- Mobile Menu -->
+    <div 
+     v-if="isMobileMenuOpen" 
+     class="items-center justify-between w-full lg:hidden lg:w-auto lg:order-1" 
+     id="navbar-sticky"
+    >
+      <ul class="flex flex-col p-4 lg:py-1 mt-4 font-normal border-t-2 border-indigo-200 lg:space-x-0 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:px-3 text-black text-center">
+        <li>
+          <a href="#" class="block py-2 px-3 text-white hover:text-indigo-700 hover:bg-white text-sm font-semibold" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-white hover:text-indigo-700 hover:bg-white text-sm font-semibold">About</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-white hover:text-indigo-700 hover:bg-white text-sm font-semibold">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-white hover:text-indigo-700 hover:bg-white text-sm font-semibold">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-white hover:text-indigo-700 hover:bg-white text-sm font-semibold">Testimonials</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-white hover:text-indigo-700 hover:bg-white text-sm font-semibold">Contact</a>
+        </li>
+      </ul>
+    </div>
+     
+    <!-- Desktop Menu -->
+    <div class="hidden w-full lg:block md:hidden sm:hidden md:w-auto" id="navbar-sticky">
+      <ul class="py-1 px-6 text-sm font-medium flex flex-col rounded-full md:flex-row md:space-x-6 rtl:space-x-reverse md:mt-0 md:border-0 bg-white">
+        <li><a href="#" class="block py-2 text-indigo-950 hover:text-indigo-700">Home </a></li>
+        <li><a href="#" class="block py-2 text-indigo-950 hover:text-indigo-700">About</a></li>
+        <li><a href="#" class="block py-2 text-indigo-950 hover:text-indigo-700">Services</a></li>
+        <li><a href="#" class="block py-2 text-indigo-950 hover:text-indigo-700">Projects</a></li>
+        <li><a href="#" class="block py-2 text-indigo-950 hover:text-indigo-700">Testimonials</a></li>
+        <li><a href="#" class="block py-2 text-indigo-950 hover:text-indigo-700">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="mt-24 md:mt-24 lg:mt-28 md:py-0 flex flex-row rounded-2xl lg:py-12 px-10 justify-between bg-gradient-to-b from-indigo-950 via-indigo-800 to-indigo-400">
+    <div class="flex flex-col py-24 text-center md:text-center lg:text-left">
+      <!-- Teks: Kiri -->
+      <p class="font-semibold text-4xl md:text-5xl lg:text-5xl tracking-normal justify-center py-2 sm:py-0 sm:justify-start">{{ caption }}</p>
+      <p class="font-light text-2xl md:text-4xl lg:text-4xl tracking-normal py-5">- Unveil Your Story with Lenscape!</p>
+      <!-- Gambar: Kanan -->
+    </div>
+    <img alt="header image" class="w-1/3 object-contain hidden lg:block" :src="photo" />
+  </div>
+
+  <div>
+    <slot />
+  </div>
+
+</div>
+</template>
 
 <script setup>
 import arrowup from '@/assets/icons/arrowup.vue';
+import { ref } from "vue";
+
+const isMobileMenuOpen = ref(false);
+
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
 
 defineProps({
   photo: String,

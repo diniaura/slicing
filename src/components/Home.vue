@@ -13,36 +13,37 @@ import ServicesCard from './ServicesCard.vue'
 import Footer from './Footer.vue'
 import Services3 from './Services3.vue'
 import Header from './Header.vue'
+import tetsuya from './tetsuya.vue'
 </script>
 
 <template>
-  <main class="text-white bg-white">
+  <main class="text-white bg-white overflow-hidden">
     <!-- Header -->
     <Header photo="src/assets/img/camera.png" caption="Picture Perfect Moments, Cinematic Memories" />
 
     <!-- About (Gadhing) -->
-    <div class="h-screen mx-7 mb-16">
+    <div class="md:h-auto mt-10 md:mt-10 lg:mt-16 h-auto mx-7 mb-16">
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         About
       </div>
-      <div class="flex w-96 mx-auto justify-center mt-7 text-indigo-950 text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
         Get to Know About Us 
       </div>
-      <div class="mt-7 px-14 justify-center text-center text-xl text-slate-800">
+      <div class="mt-7 lg:px-14 justify-center text-center text-base md:text-lg lg:text-xl text-slate-800">
         Lenscape is photography and videography services company that focuses on profesionalism, innovation
         and collaboration. Lenscape has become a top choice for special events.
       </div>
-      <div class="flex px-28 justify-center space-x-11 mt-10">
-        <div class="flex flex-col w-80 p-8 border-2 border-blue-700 rounded-xl justify-center shadow-2xl">
+      <div class="grid md:grid-cols-2 lg:flex place-items-center gap-y-10 mt-10 lg:mx-16 p-9">
+        <div class="flex flex-col w-auto p-8 border-2 border-blue-700 rounded-xl justify-center shadow-2xl h-80 mx-7">
           <profesional 
             class="relative mx-auto h-28 w-24" />
           <div class="flex flex-col mt-3">
-            <p class="flex text-slate-800 justify-center font-semibold text-2xl">Professional</p>
-            <p class="mt-4 text-center text-black">We prioritize professionalism in every aspect of the business, 
+            <p class="flex text-slate-800 justify-center font-semibold text-xl">Professional</p>
+            <p class="mt-2 text-center text-black">We prioritize professionalism in every aspect of the business, 
               committed to providing high quality service.</p>
           </div>
         </div>
-        <div class="flex flex-col w-80 p-8 border-2 border-blue-700 rounded-xl justify-center shadow-2xl ">
+        <div class="flex flex-col w-auto p-8 border-2 border-blue-700 rounded-xl justify-center shadow-2xl h-80 mx-7">
           <innovative 
             class="relative mx-auto h-28 w-24" />
           <div class="flex flex-col mt-3">
@@ -51,12 +52,12 @@ import Header from './Header.vue'
               visuals, able to embrace new ideas to create unique works.</p>
           </div>
         </div>
-        <div class="flex flex-col w-80 p-8 border-2 border-blue-700 rounded-xl justify-center shadow-2xl ">
+        <div class="flex flex-col w-auto p-8 border-2 border-blue-700 rounded-xl justify-center shadow-2xl h-80 mx-7 md:col-span-2">
           <collaborative 
             class="relative mx-auto h-28 w-24" />
           <div class="flex flex-col mt-3">
             <p class="flex text-slate-800 justify-center font-semibold text-xl">Collaborative</p>
-            <p class="mt-2 text-center text-black">We collaborate actively by combining the client's vision 
+            <p class="mt-2 text-center text-black md:px-10 lg:px-2">We collaborate actively by combining the client's vision 
               with our expertise to create extraordinary results.</p>
           </div>
         </div>
@@ -64,14 +65,14 @@ import Header from './Header.vue'
     </div>
   
     <!-- Services -->
-    <div class="h-screen mx-7 my-4">
+    <div class="h-auto md:h-auto lg:h-screen mx-7 my-4">
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         Services
       </div>
-      <div class="flex w-96 mx-auto justify-center mt-7 text-indigo-950 text-4xl font-semibold">
-        Best Services for you
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
+        Best Services for You
       </div> 
-      <div class="max-w-h mx-auto mt-7 px-12 justify-center text-center text-xl text-slate-800">
+      <div class="mt-7 lg:px-14 justify-center text-center text-base md:text-lg lg:text-xl text-slate-800">
         Lenscape can provide the best service. Our commitment to quality, innovation and customer satisfaction 
         sets us apart as the top choice for individuals and businesses looking for the best.
       </div> 
@@ -95,24 +96,24 @@ import Header from './Header.vue'
     </div>
 
     <!-- Projects -->
-    <div class="h-auto mx-7">
+    <div class="h-auto mx-7 mt-10 md:mt-10 lg:mt-0">
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         Projects
       </div>
-      <div class="flex w-96 mx-auto justify-center mt-7 text-indigo-950 text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
         Last Completed Project
       </div> 
-      <div class="max-w-h mx-auto mt-7 px-12 justify-center text-center text-xl text-slate-800">
+      <div class="mt-7 lg:px-14 justify-center text-center text-base md:text-lg lg:text-xl text-slate-800">
         Lenscape has successfully completed several projects with clients. Of course, the entire project 
         achieved satisfactory results and received very good feedback from our clients.
       </div> 
-      <div class="flex flex-row mt-7 justify-center mb-7">
-        <p class="text-xl cursor-pointer text-black tracking-tight hover:font-medium hover:text-indigo-950 mr-0">All Project</p>
-        <p class="text-xl cursor-pointer text-black tracking-tight hover:font-medium hover:text-indigo-950 mx-10">Photography</p>
-        <p class="text-xl cursor-pointer text-black tracking-tight hover:font-medium hover:text-indigo-950 mr-0">Videography</p>
+      <div class="flex flex-row mt-7 justify-center mb-7 space-x-6 text-black text-lg font-semibold">
+        <p class="cursor-pointer tracking-tight hover:text-indigo-950">All Project</p>
+        <p class="cursor-pointer tracking-tight hover:text-indigo-950">Photography</p>
+        <p class="cursor-pointer tracking-tight hover:text-indigo-950">Videography</p>
       </div>
       <!-- Photos -->
-      <div class="grid grid-cols-3 grid-rows-2 gap-7 mx-24">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 mx-8 md:mx-8 lg:mx-24">
         <ProjectCard photo="src/assets/img/project1.jpg" caption="The Wedding of Axel and Emma at Galaxia Hall" />
         <ProjectCard photo="src/assets/img/project2.jpg" caption="Yearbook of Sanghai Senior High School at Lenscape Studio" />
         <ProjectCard photo="src/assets/img/project3.jpg" caption="Product Promotion at Burger Queen" />
@@ -123,34 +124,28 @@ import Header from './Header.vue'
     </div>
 
     <!-- Review -->
-    <div class="bg-indigo-400 h-screen mt-20">
-      <div class="flex flex-row justify-between px-12 py-14">
-        <div class="flex flex-col mr-9 ml-3">
-          <h2 class="text-4xl font-semibold tracking-normal">What our Customers <br /> are saying</h2>
-          <p class="text-2xl my-5 mr-20 text-justify font-light">Lenscape prioritizes quality and client satisfaction.</p>
-        </div>
-        <!-- pindah posisi -->
-        <div class="absolute flex bg-slate-100 border-2 border-indigo-400 w-7/12 rounded-xl mx-3 px-3 mt-52">
-          <div class="flex flex-col">
-            <div class=" flex flex-row m-7">
-              <img src="@/assets/img/person1.jpg" alt=""
-                class="rounded-3xl w-1/6" />
-              <div class="flex flex-col space-y-2 mt-4 ml-6">
-                <h4 class="text-xl text-gray-900 font-semibold">Kenzie Axel</h4>
-                <fivestar class=""/>
-                <hr class="border-t-2 border-indigo-400 my-5 w-60"/>
-              </div>
-              <quote class="transform translate-x-48" />
+    <div class="relative mt-20 bg-indigo-400 lg:h-screen">
+      <div class="relative flex flex-col text-white p-7 lg:m-10 lg:py-14">
+        <h2 class="text-3xl md:text-4xl lg:text-4xl lg:mt-7 font-semibold">What our Customers are saying</h2>
+        <p class="text-xl my-5 font-light">Lenscape prioritizes quality and client satisfaction.</p>
+        <div class="lg:mt-14 relative z-10 lg:w-7/12 bg-slate-100 p-6 lg:p-8 bottom-0 rounded-lg border-2 border-indigo-400 flex flex-col space-y-4">
+          <div class="relative flex flex-row items-center space-x-3">
+            <img src="@/assets/img/person1.jpg" alt="" class="rounded-2xl w-1/5 md:w-1/6 lg:w-1/6">
+            <div class="flex flex-col space-y-1 lg:space-y-2">
+              <h4 class="text-xl text-gray-900 font-semibold">Kenzie Axel</h4>
+              <fivestar />
+              <hr class="border-indigo-400 border-t-2">
             </div>
-              <p class="text-gray-900 text-justify text-medium mx-8 mb-7">
-                I had the pleasure of working with Lenscape for our recent event,
-                and I cannot express how thrilled we are with the exceptional
-                videography services provided. From start to finish,
-                the experience was seamless and professional.
-              </p>
+            <quote class="absolute end-0 h-9"/>
           </div>
+          <p class="text-gray-900 text-justify">
+            I had the pleasure of working with Lenscape for our recent event,
+            and I cannot express how thrilled we are with the exceptional
+            videography services provided. From start to finish,
+            the experience was seamless and professional.
+          </p>
         </div>
-        <img src="@/assets/img/review.jpg" class="my-2 flex flex-col items-center w-6/12 rounded-xl" alt="" />
+        <img src="@/assets/img/review.jpg" class="hidden md:hidden z-0 absolute my-2 lg:flex flex-col items-center w-6/12 rounded-xl right-0" alt="" />
       </div>
     </div>
 
@@ -161,30 +156,30 @@ import Header from './Header.vue'
     </div>
 
     <!-- Testimonials -->
-    <div class="flex flex-row mx-5 justify-center">
+    <div class="h-auto flex flex-row mx-7 justify-center">
       <TestiCard 
         name="Alex Shengelya" 
         comments="Working with Igor was a pleasure! He's a professional photographer with an amazing skills and expensive equipment." 
         photo="src/assets/img/person2.jpg" />
-      <TestiCard 
+      <!-- <TestiCard 
         name="Mickey Malka"
         comments="Great photographer! Very professional and photos came out amazing! Will definitely use again!"
-        photo="src/assets/img/person3.jpg" />
+        photo="src/assets/img/person3.jpg" /> -->
     </div>
     
+    <!-- Contact -->
     <div class="h-auto mx-7 mt-16">
-      <!-- Contact -->
-      <div class="rounded-xl py-9 border-2 border-indigo-400 bg-gradient-to-r from-indigo-900 via-indigo-500 to-gray-100">
-        <div class="flex flex-row mx-10 justify-between items-center">
-          <div class="flex flex-col">
-            <h2 class="text-3xl font-semibold">Do you have any questions?</h2>
+      <div class="h-auto rounded-xl py-9 border-2 border-indigo-400 bg-gradient-to-r from-indigo-900 via-indigo-500 to-gray-100">
+        <div class="flex flex-col md:flex-col lg:flex-row px-7 lg:px-10 justify-between items-center space-y-4">
+          <div class="flex flex-col text-center lg:text-left">
+            <h2 class="text-2xl font-semibold">Do you have any questions?</h2>
             <p class="text-xl font-light leading-10">Put your email address and get started</p>
           </div>
           <!-- input -->
-          <div class="w-6/12 h-14 rounded-lg border-2 border-indigo-950 bg-transparent flex flex-row justify-between items-center px-2 ">
-            <p class="text-normal text-black">Enter your email address</p>
+          <div class="w-5/6 lg:w-1/2 rounded-lg border-2 border-indigo-950 bg-transparent flex flex-row justify-between items-center p-2 ">
+            <p class="text-sm text-black">Enter your email address</p>
             <div class="bg-transparent text-indigo-950 font-normal px-2">
-              <div class="flex justify-center items-center px-1 border bg-indigo-400 rounded-md w-8 h-8">
+              <div class="flex justify-center items-center px-1 border bg-indigo-400 rounded-md w-7 h-7">
                 <cursor class="w-3/4" />
               </div>
             </div>
@@ -195,6 +190,8 @@ import Header from './Header.vue'
 
     <!-- Footer -->
     <Footer />
+
+    <Services3 />
 
   </main>
 </template>
