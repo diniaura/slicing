@@ -54,7 +54,7 @@
     </div>
   </div>
   <div class="flex justify-center items-center max-w-5xl mx-auto p-2 border-t-2 ">
-        <p class="text-xl font-thin mb-3">©2023 Lenscape. All Rights Reserved.</p>
+        <p class="text-xl font-thin mb-3 text-center">©2023 Lenscape. All Rights Reserved.</p>
       </div>
 </div>
 </template>

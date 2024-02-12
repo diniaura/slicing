@@ -100,7 +100,7 @@
   </div>
 
   <!-- Header -->
-  <div class="mt-24 md:mt-24 lg:mt-28 md:py-0 flex flex-row rounded-2xl lg:py-12 px-10 justify-between bg-gradient-to-b from-indigo-950 via-indigo-800 to-indigo-400">
+  <div class="mt-24 md:mt-24 lg:mt-28 md:py-0 flex flex-row rounded-2xl lg:py-12 px-10 justify-between items-center bg-gradient-to-b from-indigo-950 via-indigo-800 to-indigo-400">
     <div class="flex flex-col py-24 text-center md:text-center lg:text-left">
       <!-- Teks: Kiri -->
       <p class="font-semibold text-4xl md:text-5xl lg:text-5xl tracking-normal justify-center py-2 sm:py-0 sm:justify-start">{{ caption }}</p>

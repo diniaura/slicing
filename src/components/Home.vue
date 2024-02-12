@@ -13,7 +13,6 @@ import ServicesCard from './ServicesCard.vue'
 import Footer from './Footer.vue'
 import Services3 from './Services3.vue'
 import Header from './Header.vue'
-import tetsuya from './tetsuya.vue'
 </script>
 
 <template>
@@ -21,19 +20,19 @@ import tetsuya from './tetsuya.vue'
     <!-- Header -->
     <Header photo="src/assets/img/camera.png" caption="Picture Perfect Moments, Cinematic Memories" />
 
-    <!-- About (Gadhing) -->
+    <!-- About -->
     <div class="md:h-auto mt-10 md:mt-10 lg:mt-16 h-auto mx-7 mb-16">
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         About
       </div>
-      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-3xl lg:text-3xl font-semibold">
         Get to Know About Us 
       </div>
       <div class="mt-7 lg:px-14 justify-center text-center text-base md:text-lg lg:text-xl text-slate-800">
         Lenscape is photography and videography services company that focuses on profesionalism, innovation
         and collaboration. Lenscape has become a top choice for special events.
       </div>
-      <div class="grid md:grid-cols-2 lg:flex place-items-center gap-y-10 mt-10 lg:mx-16 p-9">
+      <div class="grid md:grid-cols-2 lg:flex place-items-center gap-y-10 mt-10 lg:mx-16 p-9 justify-center">
         <div class="flex flex-col w-auto p-8 border-2 border-blue-700 rounded-xl justify-center shadow-2xl h-80 mx-7">
           <profesional 
             class="relative mx-auto h-28 w-24" />
@@ -69,7 +68,7 @@ import tetsuya from './tetsuya.vue'
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         Services
       </div>
-      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-3xl lg:text-3xl font-semibold">
         Best Services for You
       </div> 
       <div class="mt-7 lg:px-14 justify-center text-center text-base md:text-lg lg:text-xl text-slate-800">
@@ -77,22 +76,9 @@ import tetsuya from './tetsuya.vue'
         sets us apart as the top choice for individuals and businesses looking for the best.
       </div> 
       <!-- card components -->
-      <ServicesCard />
+        <ServicesCard />
       <!-- Slides button -->
-      <div class="flex justify-center mt-5">
-        <button type="button" class="w-8 h-3 rounded-full bg-indigo-400 mr-2" aria-current="false" aria-label="Slide 1"
-          data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-slate-300 mr-2" aria-current="false" aria-label="Slide 2"
-          data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-slate-300 mr-2" aria-current="false" aria-label="Slide 3"
-          data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-slate-300 mr-2" aria-current="false" aria-label="Slide 1"
-          data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-slate-300 mr-2" aria-current="false" aria-label="Slide 2"
-          data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-slate-300" aria-current="false" aria-label="Slide 3"
-          data-carousel-slide-to="2"></button>
-      </div>
+      
     </div>
 
     <!-- Projects -->
@@ -100,14 +86,14 @@ import tetsuya from './tetsuya.vue'
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         Projects
       </div>
-      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-3xl lg:text-3xl font-semibold">
         Last Completed Project
       </div> 
       <div class="mt-7 lg:px-14 justify-center text-center text-base md:text-lg lg:text-xl text-slate-800">
         Lenscape has successfully completed several projects with clients. Of course, the entire project 
         achieved satisfactory results and received very good feedback from our clients.
       </div> 
-      <div class="flex flex-row mt-7 justify-center mb-7 space-x-6 text-black text-lg font-semibold">
+      <div class="flex flex-col md:flex-row lg:flex-row mt-7 justify-center items-center mb-7 text-black text-lg font-semibold">
         <p class="cursor-pointer tracking-tight hover:text-indigo-950">All Project</p>
         <p class="cursor-pointer tracking-tight hover:text-indigo-950">Photography</p>
         <p class="cursor-pointer tracking-tight hover:text-indigo-950">Videography</p>
@@ -126,7 +112,7 @@ import tetsuya from './tetsuya.vue'
     <!-- Review -->
     <div class="relative mt-20 bg-indigo-400 lg:h-screen">
       <div class="relative flex flex-col text-white p-7 lg:m-10 lg:py-14">
-        <h2 class="text-3xl md:text-4xl lg:text-4xl lg:mt-7 font-semibold">What our Customers are saying</h2>
+        <h2 class="text-3xl md:text-3xl lg:text-3xl lg:mt-7 font-semibold">What our Customers are saying</h2>
         <p class="text-xl my-5 font-light">Lenscape prioritizes quality and client satisfaction.</p>
         <div class="lg:mt-14 relative z-10 lg:w-7/12 bg-slate-100 p-6 lg:p-8 bottom-0 rounded-lg border-2 border-indigo-400 flex flex-col space-y-4">
           <div class="relative flex flex-row items-center space-x-3">

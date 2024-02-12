@@ -17,7 +17,7 @@ import Reason3 from '@/assets/icons/reason3.vue';
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         Features
       </div>
-      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-3xl lg:text-3xl font-semibold">
         Our Key Features
       </div>
       <!-- Grid -->
@@ -36,7 +36,7 @@ import Reason3 from '@/assets/icons/reason3.vue';
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         Reasons
       </div>
-      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-3xl lg:text-3xl font-semibold">
         Why Choose Lenscape for Your Yearbook?
       </div>
       <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:flex-row lg:flex justify-center items-center mt-14 lg:space-x-10">
@@ -76,7 +76,7 @@ import Reason3 from '@/assets/icons/reason3.vue';
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         Theme
       </div>
-      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-3xl lg:text-3xl font-semibold">
         Best Theme Recommendations
       </div>
 
@@ -100,7 +100,7 @@ import Reason3 from '@/assets/icons/reason3.vue';
       <div class="flex w-28 mx-auto p-2 bg-indigo-950 rounded-full justify-center shadow-xl">
         Portofolio
       </div>
-      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-4xl lg:text-4xl font-semibold">
+      <div class="flex mx-auto text-center justify-center mt-7 text-indigo-950 text-3xl md:text-3xl lg:text-3xl font-semibold">
         Our Amazing Work
       </div>
       <!-- grid -->
