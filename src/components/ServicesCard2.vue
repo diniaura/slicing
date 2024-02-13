@@ -1,13 +1,13 @@
 <template>
-    <carousel :items-to-show="1">
+    <carousel :items-to-show="3">
     <!-- Slides -->
     <slide v-for="slide in 5" :key="slide">
-    <div class="flex flex-col bg-slate-300 rounded-xl text-indigo-950 relative pb-16">
+    <div class="w-full m-1 md:w-11/12 lg:w-11/12 flex flex-col bg-slate-300 rounded-xl text-indigo-950 relative lg:pb-16">
       <img src="@/assets/img/services2(1).png" alt="clothes">
-      <div class="absolute flex flex-col backdrop-blur-md w-full pt-4 text-center bottom-0 border rounded-xl place-items-end">
+      <div class="hidden absolute lg:flex flex-col backdrop-blur-md w-full px-4 pt-4 pb-10 text-center bottom-0 border rounded-xl place-items-end">
         <p class="text-xl font-semibold self-center">Clothing Product Photography</p>
-        <p class="self-center">Flat lay, ghost mannequin, hanged & pinned shoot</p>
-        <div class="bg-indigo-950 text-white w-fit px-5 py-1 mt-7 flex items-center justify-center rounded-tl-xl rounded-br-xl">
+        <p class="self-center hidden lg:flex">Flat lay, ghost mannequin, hanged & pinned shoot</p>
+        <div class="absolute bottom-0 right-0 bg-indigo-950 text-white w-fit px-5 py-1 mt-7 flex items-center justify-center rounded-tl-xl rounded-br-xl">
           <p class="">Customize</p>
           <!-- <arrowup class="w-7 h-7 mt-1" /> -->
         </div>

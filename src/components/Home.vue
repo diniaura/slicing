@@ -13,6 +13,8 @@ import ServicesCard from './ServicesCard.vue'
 import Footer from './Footer.vue'
 import Services3 from './Services3.vue'
 import Header from './Header.vue'
+import Services2 from './Services2.vue'
+import Services1 from './Services1.vue'
 </script>
 
 <template>
@@ -178,6 +180,10 @@ import Header from './Header.vue'
     <Footer />
 
     <Services3 />
+    
+    <Services1 />
+
+    <Services2 />
 
   </main>
 </template>
